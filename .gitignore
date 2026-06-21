@@ -1,0 +1,19 @@
+@"
+# Maven
+target/
+!target/site/
+!target/site/allure-maven-plugin/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Allure cache
+.allure/
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Set-Content -Path ".gitignore"
