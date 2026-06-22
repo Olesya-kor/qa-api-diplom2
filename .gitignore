@@ -1,0 +1,22 @@
+# Maven - НЕ игнорируем target полностью
+#target/
+
+# Игнорируем всё в target, кроме allure-results
+target/*
+!target/allure-results/
+
+# Игнорируем сгенерированный HTML отчёт
+target/site/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Allure cache
+.allure/
+
+# OS
+.DS_Store
+Thumbs.db
