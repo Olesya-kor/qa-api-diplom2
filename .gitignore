@@ -1,8 +1,12 @@
-@"
-# Maven
-target/
-!target/site/
-!target/site/allure-maven-plugin/
+# Maven - НЕ игнорируем target полностью
+#target/
+
+# Игнорируем всё в target, кроме allure-results
+target/*
+!target/allure-results/
+
+# Игнорируем сгенерированный HTML отчёт
+target/site/
 
 # IDE
 .idea/
@@ -16,4 +20,3 @@ target/
 # OS
 .DS_Store
 Thumbs.db
-"@ | Set-Content -Path ".gitignore"

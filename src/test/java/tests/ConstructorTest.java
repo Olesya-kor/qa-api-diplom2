@@ -18,11 +18,11 @@ public class ConstructorTest extends BaseTest {
         ConstructorPage constructorPage =
                 new ConstructorPage(driver);
 
+        constructorPage.clickSauces();
         constructorPage.clickBuns();
 
         assertTrue(
-                driver.getPageSource()
-                        .contains("Булки")
+                constructorPage.isBunsSelected()
         );
     }
 
@@ -37,8 +37,7 @@ public class ConstructorTest extends BaseTest {
         constructorPage.clickSauces();
 
         assertTrue(
-                driver.getPageSource()
-                        .contains("Соусы")
+                constructorPage.isSaucesSelected()
         );
     }
 
@@ -53,8 +52,7 @@ public class ConstructorTest extends BaseTest {
         constructorPage.clickFillings();
 
         assertTrue(
-                driver.getPageSource()
-                        .contains("Начинки")
+                constructorPage.isFillingsSelected()
         );
     }
 }
